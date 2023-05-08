@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.poetry]
 name = "lib_remla19"
-version = "0.0.6"
+version = "0.0.7"
 description = "version aware lib for the course REMLA2023 (team 19) on which front-end app depends"
 authors = ["hansd99 <hans.dekker99@gmail.com>"]
 
