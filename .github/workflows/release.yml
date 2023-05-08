@@ -1,9 +1,7 @@
 name: Release Python package
 
 on:
-  push:
-  # Only run the workflow if the commit message doesn't contain "[skip version bump]"
-    if: '!(contains(github.event.head_commit.message, "[skip version bump]"))'
+  push
 
 jobs:
   deploy:
@@ -30,7 +28,7 @@ jobs:
         git config --global user.name "hansd99"
         git config --global user.email "hans.dekker99@gmail.com"
         git add pyproject.toml
-        git commit -m "Bump version [skip version bump]"
+        git commit -m "Bump version [skip ci]"
         git push
     - name: Install dependencies
       run: |
