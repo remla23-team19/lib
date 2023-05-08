@@ -31,11 +31,9 @@ jobs:
         git commit -m "Bump version [skip ci]"
         git push
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install build
+      run: poetry install
     - name: Build package
-      run: python -m build
+      run: poetry build
     - name: Publish new distributions to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
