@@ -12,9 +12,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
-      env:
+      with:
         # Use the PAT to authenticate the Git commands.
-        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        token: ${{ secrets.PAT_TOKEN }}
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
@@ -32,9 +32,6 @@ jobs:
         git add pyproject.toml
         git commit -m "Bump version [skip version bump]"
         git push
-      env:
-        # Use the PAT to authenticate the Git commands.
-        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
