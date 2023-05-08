@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [tool.poetry]
 name = "lib_remla19"
 version = "0.0.10"
-description = "version aware lib for the course REMLA2023 (team 19) on which front-end app depends"
+description = "version aware lib for REMLA2023 (team 19)"
 authors = ["hansd99 <hans.dekker99@gmail.com>"]
 
 [tool.poetry.dependencies]
@@ -16,13 +16,17 @@ wheel = "^0.37.0"
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
 
+[tool.poetry.metadata]
+license = "MIT"
+long_description = """
+
 [project]
 name = "lib_remla19"
 version = "0.0.5"
 authors = [
   { name="hansd99", email="hans.dekker99@gmail.com" },
 ]
-description = "version aware lib for the course REMLA2023 (team 19) on which front-end app depends"
+description = "version aware lib for REMLA2023 (team 19)"
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
