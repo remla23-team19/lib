@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "lib_remla19"
 version = "0.0.10"
 description = "version aware lib for REMLA2023 (team 19)"
+readme = "README.md"
 authors = ["hansd99 <hans.dekker99@gmail.com>"]
 
 [tool.poetry.dependencies]
@@ -15,14 +16,6 @@ wheel = "^0.37.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
-
-[tool.poetry.metadata]
-license = "MIT"
-long_description = """
-# lib
-
-This is the long description of the lib.
-"""
 
 [project]
 name = "lib_remla19"
