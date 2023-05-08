@@ -11,11 +11,11 @@ authors = ["hansd99 <hans.dekker99@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.6"
-setuptools = "^58.0.0"
-wheel = "^0.37.0"
+setuptools = "*"
+wheel = "*"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.2.5"
+pytest = "*"
 
 [project]
 name = "lib_remla19"
