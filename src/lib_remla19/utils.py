@@ -1,6 +1,11 @@
-class VersionUtil:
-    def __init__(self, version='0.0.4'):
-        self._version = version
+import pkg_resources
 
-    def get_version(self):
-        return self._version
+class VersionUtil:
+    @staticmethod
+    def get_version():
+        try:
+            version = pkg_resources.get_distribution("lib-remla19").version
+        except pkg_resources.DistributionNotFound:
+            version = "unknown"
+        return version
+
