@@ -19,6 +19,10 @@ pytest = "^6.2.5"
 [tool.poetry.metadata]
 license = "MIT"
 long_description = """
+# lib
+
+This is the long description of the lib.
+"""
 
 [project]
 name = "lib_remla19"
