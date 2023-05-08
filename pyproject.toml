@@ -1,6 +1,21 @@
 [build-system]
 requires = ["setuptools", "wheel", "poetry"]
 build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "lib_remla19"
+version = "0.0.5"
+description = "version aware lib for the course REMLA2023 (team 19) on which front-end app depends"
+authors = ["hansd99 hans.dekker99@gmail.com"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+setuptools = "^58.0.0"
+wheel = "^0.37.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+
 [project]
 name = "lib_remla19"
 version = "0.0.5"
