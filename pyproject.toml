@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "lib_remla19"
+version = "0.0.1"
+authors = [
+  { name="hansd99", email="hans.dekker99@gmail.com" },
+]
+description = "version aware lib for the course REMLA2023 (team 19) on which front-end app depends"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/remla23-team19/lib"
+"Bug Tracker" = "https://github.com/remla23-team19/lib/issues"
