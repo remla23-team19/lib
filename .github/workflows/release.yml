@@ -14,7 +14,7 @@ jobs:
     - uses: actions/checkout@v3
       env:
         # Use the PAT to authenticate the Git commands.
-        PAT: ${{ secrets.PAT_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
@@ -34,7 +34,7 @@ jobs:
         git push
       env:
         # Use the PAT to authenticate the Git commands.
-        PAT: ${{ secrets.PAT_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
