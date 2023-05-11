@@ -32,7 +32,7 @@ jobs:
         git config --global user.email "hans.dekker99@gmail.com"
         git add pyproject.toml
         git commit -m "Bump version [skip ci]"
-        git push origin HEAD:refs/heads/main
+        git push origin HEAD:refs/heads/master
     - name: Install dependencies
       run: poetry install
     - name: Build package
