@@ -1,7 +1,8 @@
 name: Release Python package
 
 on:
-  push
+  push:
+    tags: ["v[0-9]+.[0-9]+.[0-9]+"]
 
 jobs:
   deploy:
@@ -11,8 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
+        ref: ${{ github.ref }}
         # Use the PAT to authenticate the Git commands.
         token: ${{ secrets.PAT_TOKEN }}
+        fetch-depth: 0
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
@@ -21,8 +24,8 @@ jobs:
       uses: snok/install-poetry@v1
     - name: Install Dependencies
       run: poetry install
-    - name: Bump Version
-      run: poetry version patch
+    - name: Bump Version (use git tags)
+      run: poetry version $(git describe --tags --abbrev=0)
     - name: Commit Changes
       run: |
         git config --global user.name "hansd99"
